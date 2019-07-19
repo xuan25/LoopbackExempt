@@ -1,0 +1,48 @@
+﻿<Window x:Class="LoopbackExempt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoopbackExempt"
+        mc:Ignorable="d"
+        Title="LoopbackExempt" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="FilterBox" Grid.Row="0" HorizontalAlignment="Stretch" Height="23" Margin="10,0" TextWrapping="NoWrap" Text="" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" VerticalAlignment="Center">
+            <TextBox.Resources>
+                <VisualBrush x:Key="TipBrush" TileMode="None" Stretch="None" AlignmentX="Left" AlignmentY="Center">
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Normal" Opacity="0.3" Background="Transparent" TextWrapping="NoWrap" Text="  Type here to search"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Style.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="False"/>
+                                <Condition Property="Text" Value="{x:Null}"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="{StaticResource TipBrush}"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsFocused" Value="False"/>
+                                <Condition Property="Text" Value=""/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="{StaticResource TipBrush}"/>
+                        </MultiTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <ListBox x:Name="AppList" Grid.Row="1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="10" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.CanContentScroll="False"/>
+        <TextBlock x:Name="LoadingPrompt" Grid.Row="1" Text="Loading..." FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

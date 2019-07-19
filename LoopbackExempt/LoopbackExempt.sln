@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoopbackExempt", "LoopbackExempt\LoopbackExempt.csproj", "{72CC5454-BD2B-4556-A1BA-4466F4D0663B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72CC5454-BD2B-4556-A1BA-4466F4D0663B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72CC5454-BD2B-4556-A1BA-4466F4D0663B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72CC5454-BD2B-4556-A1BA-4466F4D0663B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72CC5454-BD2B-4556-A1BA-4466F4D0663B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04A28281-4088-4E9F-8346-E60C766B7CB2}
+	EndGlobalSection
+EndGlobal
